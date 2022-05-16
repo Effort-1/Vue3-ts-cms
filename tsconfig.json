@@ -1,31 +1,43 @@
 {
   "compilerOptions": {
+    // 目标代码(ts->js(es5/6/7...))
     "target": "esnext",
+    // 目标代码使用的模块化方案
     "module": "esnext",
+    // 严格模式
     "strict": true,
+    // 对jsx文件进行怎么样处理
     "jsx": "preserve",
+    // 辅助的导入功能
     "importHelpers": true,
+    // 按照node的方式去解析模块
     "moduleResolution": "node",
+    // 跳过一些库的类型检测
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    // 要不要生成映射文件
     "sourceMap": true,
+    // 文件路径在解析时,基本url
     "baseUrl": ".",
+    // 指定具体要解析使用的类型
     "types": [
       "webpack-env"
     ],
+    // 路径解析(类似于 webpack alias)
     "paths": {
       "@/*": [
         "src/*"
       ]
     },
-    "lib": [
+      "lib": [
       "esnext",
       "dom",
       "dom.iterable",
       "scripthost"
     ]
   },
+  // 哪些文件下的 ts 会被编译处理
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
